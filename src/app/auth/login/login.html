@@ -1,0 +1,58 @@
+<div class="container-fluid vh-100">
+  <div class="row h-100">
+    <!-- Left side -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center left-side">
+      <h1 class="amezkart-text">Amazkart</h1>
+    </div>
+
+    <!-- Right side (login form) -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <div class="card shadow p-4" style="width: 350px;">
+        <div class="card-body">
+          <h3 class="text-center mb-3">Login</h3>
+
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Email"
+            [(ngModel)]="email"
+          />
+
+          <input
+            type="password"
+            class="form-control mb-3"
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+
+          <button class="btn btn-primary w-100" (click)="login()">Login</button>
+
+          <p class="text-danger mt-2">{{ errorMsg }}</p>
+
+          <p class="text-center mt-3">
+            New user? <a routerLink="auth/register">Register</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .left-side {
+    background-color: #007bff; /* Blue background */
+    color: yellow;
+    font-family: 'Brush Script MT', cursive; /* Stylish font */
+    font-size: 50%;
+  }
+
+  .amezkart-text {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+</style>
