@@ -1,0 +1,55 @@
+<div class="container mt-4">
+
+
+<h2 class="mb-4 text-center">Products</h2>
+
+
+<!-- Filters -->
+<div class="row mb-4">
+<div class="col-md-4">
+<input
+type="text"
+class="form-control"
+placeholder="Search product"
+[(ngModel)]="searchText"
+(input)="filterProducts()"
+/>
+</div>
+
+
+<div class="col-md-4">
+<select class="form-control" [(ngModel)]="selectedCategory" (change)="filterProducts()">
+<option value="">All Categories</option>
+<option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+</select>
+</div>
+
+
+<div class="col-md-4">
+<input
+type="range"
+min="0"
+max="1000"
+[(ngModel)]="maxPrice"
+(change)="filterProducts()"
+/>
+<p>Max Price: {{ maxPrice }}</p>
+</div>
+</div>
+
+
+<!-- Products -->
+<div class="row">
+<div class="col-md-3 mb-4" *ngFor="let product of filteredProducts">
+<div class="card h-100 shadow-sm">
+<img [src]="product.image" class="card-img-top p-3" height="200" />
+<div class="card-body">
+<h6 class="card-title">{{ product.title }}</h6>
+<p class="text-success fw-bold">₹ {{ product.price }}</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
