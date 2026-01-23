@@ -1,0 +1,13 @@
+<div *ngIf="isBrowser">
+ <ag-grid-angular
+  class="ag-theme-quartz"
+  style="width:100%; height:500px"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs">
+</ag-grid-angular>
+
+</div>
+
+<div *ngIf="!isBrowser">
+  Loading...
+</div>
