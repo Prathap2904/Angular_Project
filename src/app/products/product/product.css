@@ -1,0 +1,69 @@
+/* Page background */
+.products-page {
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Page title */
+h2 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Filter box */
+.filter-box {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Product card */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.product-image {
+  height: 200px;
+  object-fit: contain;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+/* Card body */
+.card-body {
+  padding: 12px;
+}
+
+/* Product title */
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  height: 38px;
+  overflow: hidden;
+}
+
+/* Price */
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 0;
+}
+
+/* Range input spacing */
+.form-range {
+  margin-top: 6px;
+}
